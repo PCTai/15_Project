@@ -13,7 +13,7 @@ const app = {
             id: 2,
             name: "Counter First",
             img: "./images/counter.webp",
-            page: "./CounterJs/index.html",
+            page: "./counterJs/index.html",
         },
         {
             id: 3,
@@ -43,7 +43,7 @@ const app = {
             id: 7,
             name: "Questions",
             img: "./images/question.webp",
-            page: "./questions/index.html",
+            page: "./quesions/index.html",
         },
         {
             id: 8,
@@ -91,7 +91,7 @@ const app = {
             id: 15,
             name: "Slider",
             img: "./images/slider.webp",
-            page: "./slider/index.html",
+            page: "./Slider/index.html",
         },
         {
             id: 16,
