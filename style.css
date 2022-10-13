@@ -1,0 +1,93 @@
+:root {
+    --grey-e2: #e2e8f0;
+  }
+  
+  * {
+    box-sizing: inherit;
+    text-decoration: none;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p {
+    margin: 0;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+  }
+  
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .wrapper {
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: var(--grey-e2);
+    padding: 0 0 20px 0;
+  }
+  
+  .container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  .container-fluid {
+    max-width: 100%;
+  }
+  .title {
+    font-size: 2.4rem;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  .list-projects {
+    width: 90vw;
+    max-width: var(--max-width);
+    margin: 0px auto 2rem;
+    display: grid;
+    gap: 3rem 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    height: 100%;
+  }
+  .project-item {
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all ease-in 0.2s;
+  }
+  .project-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+  .project-img {
+    height: 240px;
+  }
+  .project-footer {
+    background-color: #fff;
+    padding: 16px 20px;
+  }
+  .project-footer h3 {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 2.6rem;
+    color: #0f172a;
+    text-align: center;
+  }
