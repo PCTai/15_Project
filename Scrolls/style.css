@@ -1,0 +1,186 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+ul{
+    list-style: none;
+
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+body{
+    background-color: #f5f5f5;
+    width: 100%;
+    font-family: "Open Sans", sans-serif;
+}
+header{
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.7)), url(https://vannilla-js-basic-project-10-scroll.netlify.app/hero-bcg.jpeg) center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    
+}
+#nav{
+    width: 100%;
+    height: 5rem;
+    transition: all 0.8s ease;
+    overflow: hidden;
+    
+}
+#nav.nav-fixed{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0 0 10px 6px rgba(0, 0, 0, 0.1); 
+}
+#nav.nav-fixed .links li a{
+    color: hsl(209, 61%, 16%);
+}
+#nav.nav-fixed .links li a:hover{
+    color: rgb(15, 252, 252);
+}
+.nav-center{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:1rem 2rem;
+}
+
+
+
+.logo{
+    width: 3.6rem;
+}
+.logo img{
+    width: 100%;
+}
+.links{
+    display: flex;
+}
+.links li{
+    margin: 1rem;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+
+
+#nav.active {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0 0 10px 6px rgba(0, 0, 0, 0.1); 
+    height: 16rem;
+}
+.wrapper-show .links{
+    margin: 0;
+    flex-direction: column;
+}
+.wrapper-show .links li{
+    margin: 0;
+}
+.wrapper-show .links li a{
+    display: block;
+    width: 100%;
+    padding: 0.6rem 2rem;
+    color: #000;
+    font-weight: 400;
+}
+.menu {
+    display: none;
+}
+.menu i{
+    font-size: 28px;
+    transition: all 0.5s ease;
+}
+.menu i:hover{
+    cursor: pointer;
+    color: rgb(15, 252, 252);
+}
+.banner{
+    margin-top: 87px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+.container{
+
+}
+.container h1{
+    font-size: 64px;
+    text-transform: uppercase;
+    color: #fff;
+}
+.container p{
+    max-width: 40rem;
+    line-height: 28px;
+    color: #fff;
+    margin: 0.4rem 0;
+}
+.container a{
+    padding: 0.6rem 1rem;
+    display: inline-block;
+    border: 2px solid #fff;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 14px;
+    margin-top: 1rem;
+}
+section{
+    height: 80vh;
+    
+}
+.title{
+    width: 100%;
+    text-align: center;
+    
+}
+.title h2{
+    font-size: 48px;
+    color: rgb(42, 42, 75);
+    text-transform: uppercase;
+}
+.title h2 span{
+    color: rgb(15, 252, 252);
+}
+#service{
+    background-color: #fff;
+}
+footer{
+    padding: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(209, 61%, 16%);
+}
+footer h1{
+    font-size: 20px;
+    color: #fff;
+    letter-spacing: 4px;
+    font-weight: 400;
+}
+
+@media screen and (max-width : 800px) {
+
+    .nav-link{
+        display: none;
+    }
+    .menu {
+        display: block;
+    }
+}

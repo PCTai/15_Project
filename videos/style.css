@@ -1,0 +1,91 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.loader{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loader.show-loader{
+    z-index: -999;
+}
+.container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.container::after{
+    content: '';
+    position: absolute;
+    
+    width: 100%;
+    height: 100%;
+    
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+.video-container{
+    position: absolute;
+    
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 0;
+}
+h1{
+    position: absolute;
+    color: #fff;
+    font-size: 64px;
+    z-index: 3;
+    letter-spacing: 2px;
+}
+.switch-btn{
+    position: absolute;
+    z-index: 3;
+    left: 4rem;
+    bottom: 4rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+    transition: all 1s ease;
+    border: none;
+}
+.switch-btn.slide .switch{
+    left: 50%;
+}
+.switch-btn span{
+    padding: 0.8rem;
+    color: rgb(8, 106, 106);
+}
+.switch-btn span:hover{
+    cursor: pointer;
+
+}
+.switch{
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    border-radius: 9px;
+    background-color: rgb(8, 106, 106);
+    transition: all 1s ease;
+}
