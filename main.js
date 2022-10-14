@@ -13,7 +13,7 @@ const app = {
             id: 2,
             name: "Counter First",
             img: "./images/counter.webp",
-            page: "./counterJs/index.html",
+            page: "./couterJs/index.html",
         },
         {
             id: 3,
