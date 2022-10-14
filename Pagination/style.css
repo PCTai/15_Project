@@ -12,81 +12,54 @@ body{
 }
 a{
    text-decoration: none;
-    display: block;
 }
 /* products */
 .product{
-    margin-top: 4rem;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 .title{
-    
+    margin-top: 4rem;
     font-size: 40px;
 }
-.form{
-    margin-top: 1rem;
-    width: 100%;
-    text-align: center;
-    margin-bottom: 2rem;
+.divice{
+    width: 8rem;
+    height: 4px;
+    background-color: rgb(20, 80, 190);
 }
-.input{
-    background-color: #fff;
-    border: none;
-    width: 50%;
-    max-width: 500px;
-    height: 2rem;
-    padding-left: 1rem;
-    font-size: 16px;
-    border-radius: 5px;
-    
-}
-.input:focus{
-    outline: 2px solid orange;
-}
-
 .list-product{
-    width: max-content;
+    max-width: 1170px;;
     width: 90%;
     padding: 2rem;
     display: grid;
-    column-gap: 4rem;
-    row-gap: 3rem;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 .item{
-    position: relative;
     text-decoration: none;
     color: #000;
     text-align: center;
     display: block;
-    height: 268px;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow:  0 4px 8px rgba(0, 0, 0, 0.2);
 }
 .image{
-    width: 100%;
-    height: 100%;
+    margin: 0 auto;
+    width: 130px;
+    height: 130px;
 }
 .image img{
     width: 100%;
     height: 100%;
-    border: 10px solid #fff;
     object-fit: cover;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 .name{
-    position: absolute;
-    bottom: -1.5rem;
-    right: -1rem;
-    height: 64px;
-    background-color: #000;
-    color: #fff;
-    display: flex;padding: 0 1.5rem;
-    border-radius: 10px;
-    align-items: center;
-    font-weight: 500;
+    margin: 0.8rem 0 0.5rem 0;
+    font-weight: 300;
     font-size: 16px;
-    text-transform: uppercase;
 
 }
 .name::first-letter{
@@ -106,18 +79,18 @@ a{
     animation: spiner 0.5s infinite linear;
 }
 
-/* cock single */
+/*  Product */
 .btn{
-    width: 50%;text-align: center;
-    max-width: 160px;
     align-items: center;
-    letter-spacing: 3px;
-    font-size: 18px;
-    background-color: #49a6e9;
-    padding: 0.5rem ;
+    border: none;
+    font-size: 12px;
+    background-color: rgb(20, 80, 190);
+    padding:0.4rem 1rem;
     color: #fff;
-    margin: 2rem 0;
-    border-radius: 5px;
+    margin: auto;
+    text-transform: uppercase;
+    border-radius: 10px;
+    letter-spacing: 2px;
 }
 .btn:hover{
     opacity: 0.7;
@@ -137,8 +110,6 @@ a{
 .product-wrapper{
     display: flex;
     margin-top: 3rem;
-    width: 85vw;
-    max-width: 1080px;
     align-items: center;
 }
 .img{
@@ -155,21 +126,27 @@ a{
     width: 50%;
     text-align: left;
 }
-.product-info .title{
+h3{
     font-size: 30px;
-    font-weight: 500;
-    
-}
-.desc{
-    margin: 1rem 0;
     font-weight: 400;
-    font-size: 18px;
 }
-.drink-ingredients{
-    list-style: none;
+h5{
+    margin: 0.8rem 0;
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-size: 20px;
 }
-.drink-ingredients li i{
+.colors{
+    display: flex;
+}
+.product-color{
+    display: block;
+    width: 1rem;
+    height: 1rem;
     margin-right: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 50%;
 }
 
 @keyframes spiner {
@@ -191,4 +168,3 @@ a{
         width: 100%;
     }
 }
-

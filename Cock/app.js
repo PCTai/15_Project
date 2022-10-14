@@ -1,6 +1,7 @@
   const url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=a';
   const elProducts= document.querySelector('.list-product');
   const loading= document.querySelector('.loading');
+  const title= document.querySelector('.title');
 
   const fecthData = async function(){
     loading.innerHTML= '<img src="https://vannilla-js-basic-project-24-cocktails.netlify.app/loading.gif" alt="">';
@@ -13,25 +14,33 @@
       
     }
   }
-function renderProducts(list){
+function renderProducts(list= null){
+  if(!list){
+    title.textContent = "sorry,no drinks matched your search";
+    return;
+  }
   const productList = list
   .map((product) => {
-    const { id } = product;
+    const { idDrink:id } = product;
     const { strDrink: title} = product;
     const { strDrinkThumb: img } = product;
     // id,name,price,img
     return `
-    <a class="item" href="product.html?id=${id}&name=john&age=25">
+    <a class="item" data-id="${id}" href="drink.html">
       <div class="image">
-        <img src="${img}" class="single-product-img img" alt="${title}" />
+        <img src="${img}" class="single-product-img img" alt="${title} " />
       </div>
       <h5 class="name">${title}</h5>
           
     </a>`;
   }).join('');
-    elProducts.innerHTML =productList;
-      
-  }
+  elProducts.innerHTML =productList;
+  elProducts.addEventListener('click', function(e){
+    const id = e.target.parentElement.parentElement.dataset.id;
+    console.log(id);
+    localStorage.setItem("drink", id);
+  })    
+}
   
 
   let drinks;
@@ -39,11 +48,10 @@ function renderProducts(list){
     const data= await fecthData();
     drinks=data;
     renderProducts(data)
-
+    console.log(data[0]);
     return data;
   }
-  get()
-  console.log(drinks);
+  get();
 
  
   
@@ -55,7 +63,7 @@ function renderProducts(list){
     if(input){
       const data= await fecthData();
       renderProducts(data.filter((product) => {
-        return product.strDrink.includes(input.value);
+        return product.strDrink.toLowerCase().includes(input.value.toLowerCase());
       }));
     }
   })
