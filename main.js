@@ -147,6 +147,18 @@ const app = {
             img: "./images/cocktails.webp",
             page: "./Cock/index.html",
         },
+        {
+            id: 25,
+            name: "Wikipedia",
+            img: "./images/wiki.webp",
+            page: "./Wikipedia/index.html",
+        },
+        {
+            id: 26,
+            name: "Pagination",
+            img: "./images/paginate.webp",
+            page: "./Pagination/index.html",
+        },
         
         
     ],
