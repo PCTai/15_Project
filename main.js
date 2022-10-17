@@ -159,6 +159,12 @@ const app = {
             img: "./images/paginate.webp",
             page: "./Pagination/index.html",
         },
+        {
+            id: 27,
+            name: "Gallery",
+            img: "./images/gallery.webp",
+            page: "./Gallery/index.html",
+        },
         
         
     ],

@@ -1,42 +1,48 @@
-
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     background-color: #f5f5f5;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    
+
 }
-a{
-   text-decoration: none;
+
+a {
+    text-decoration: none;
 }
+
 /* products */
-.product{
+.product {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.title{
+
+.title {
     margin-top: 4rem;
     font-size: 40px;
 }
-.divice{
+
+.divice {
     width: 8rem;
     height: 4px;
     background-color: rgb(20, 80, 190);
 }
-.list-product{
-    max-width: 1170px;;
+
+.list-product {
+    max-width: 1170px;
+    ;
     width: 90%;
     padding: 2rem;
     display: grid;
     gap: 2rem;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
-.item{
+
+.item {
     text-decoration: none;
     color: #000;
     text-align: center;
@@ -44,62 +50,62 @@ a{
     background-color: #fff;
     padding: 2rem;
     border-radius: 10px;
-    box-shadow:  0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-.image{
+
+.image {
     margin: 0 auto;
     width: 130px;
     height: 130px;
 }
-.image img{
+
+.image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.name{
+
+.name {
     margin: 0.8rem 0 0.5rem 0;
     font-weight: 300;
     font-size: 16px;
 
 }
-.name::first-letter{
+
+.name::first-letter {
     text-transform: uppercase;
 }
-.price{
+
+.price {
     font-weight: bold;
-}
-.circle{
-    
-    margin-top: 4rem;
-    width: 6rem;
-    height: 6rem;
-    border-radius: 50%;
-    border: 5px solid rgb(20, 80, 190);
-    border-top-color:  transparent;
-    animation: spiner 0.5s infinite linear;
 }
 
 /*  Product */
-.btn{
+.btn {
     align-items: center;
     border: none;
     font-size: 12px;
     background-color: rgb(20, 80, 190);
-    padding:0.4rem 1rem;
+    padding: 0.4rem 1rem;
     color: #fff;
     margin: auto;
     text-transform: uppercase;
     border-radius: 10px;
     letter-spacing: 2px;
 }
-.btn:hover{
+
+.btn:hover {
     opacity: 0.7;
     cursor: pointer;
 }
-.btn::first-letter, h3::first-letter,h5::first-letter{
+
+.btn::first-letter,
+h3::first-letter,
+h5::first-letter {
     text-transform: uppercase;
 }
-.product-single{
+
+.product-single {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -107,39 +113,47 @@ a{
     width: 100%;
     text-align: center;
 }
-.product-wrapper{
+
+.product-wrapper {
     display: flex;
     margin-top: 3rem;
     align-items: center;
 }
-.img{
+
+.img {
     height: 400px;
     width: 50%;
     margin-right: 2rem;
 }
-.img img{
+
+.img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.product-info{
+
+.product-info {
     width: 50%;
     text-align: left;
 }
-h3{
+
+h3 {
     font-size: 30px;
     font-weight: 400;
 }
-h5{
+
+h5 {
     margin: 0.8rem 0;
     font-weight: 500;
     letter-spacing: 2px;
     font-size: 20px;
 }
-.colors{
+
+.colors {
     display: flex;
 }
-.product-color{
+
+.product-color {
     display: block;
     width: 1rem;
     height: 1rem;
@@ -149,22 +163,57 @@ h5{
     border-radius: 50%;
 }
 
+.page-btn {
+    width: 2rem;
+    height: 2rem;
+    background: hsl(205, 90%, 76%);
+    border-color: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0.5rem;
+    transition: all 0.5s ease
+}
+
+.page-btn.active-btn {
+    background: hsl(205, 86%, 17%);
+    color: #fff;
+}
+
+.prev-btn,
+.next-btn {
+    background: transparent;
+    border-color: transparent;
+    font-weight: bold;
+    text-transform: capitalize;
+    letter-spacing: var(--spacing);
+    margin: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn-container {
+    margin: 1rem 0 3rem 0;
+}
+
 @keyframes spiner {
-    
-    to{
+
+    to {
         transform: rotate(360deg);
     }
 }
+
 @media screen and (max-width: 780px) {
-    .product-wrapper{
+    .product-wrapper {
         flex-direction: column;
     }
-    .img{
+
+    .img {
         width: 100%;
         margin-bottom: 2rem;
-        margin-right:0 ;
+        margin-right: 0;
     }
-    .product-info{
+
+    .product-info {
         width: 100%;
     }
 }

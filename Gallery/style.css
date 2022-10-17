@@ -1,0 +1,107 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #f5f5f5;
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+
+.section{
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 4rem 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+.img{
+    width: 100%;
+    height: 240px;
+    border-radius: 5px;cursor: pointer;
+}
+.modal{
+    position: fixed;
+    display: none;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+}
+.modal.open{
+    display: block;
+}
+.close-btn{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 48px;
+    background-color: transparent;
+    color: #fff;
+}
+.modal-content{
+    position: relative;
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+    margin-top: 8rem;
+}
+.main-img{
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+}
+.image-name{
+    font-size: 28px;
+    margin: 1rem 0 3rem;
+    color: #fff;
+}
+.image-name::first-letter{
+    text-transform: uppercase;
+}
+.modal-images{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+.modal-img{
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    opacity: 0.7;
+}
+.modal-img.selected{
+    opacity: 1;
+}
+.prev-btn{
+    position: absolute;
+    top: 160px;
+    left: -3rem;
+    background-color: transparent;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+}
+.next-btn{
+    position: absolute;
+    top: 160px;
+    right:  -3rem;
+    background-color: transparent;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+
+}
