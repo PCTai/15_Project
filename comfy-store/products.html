@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./products.css">
+    <title>Product completed</title>
+</head>
+<body>
+    <nav class="nav dart">
+        <div class="nav-container">
+            <button class="toggle-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li>
+                    <a href="index.html" class="link-btn">Home</a>
+                </li>
+                <li>
+                    <a href="products.html" class="link-btn">Products</a>
+                </li>
+                <li>
+                    <a href="about.html" class="link-btn">About</a>
+                </li>
+            </ul>
+            <div class="logo">
+                <img src="https://vanilla-js-store.netlify.app/images/logo-white.svg" alt="logo">
+            </div>
+
+            <div class="toggle-container">
+                <button class="toggle-cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-item-count">6</span>
+                </button>
+
+            </div>
+
+        </div>
+    </nav>
+    <section class="page-hero">
+        <div class="section-center">
+          <h3 class="page-hero-title">Home / Products</h3>
+        </div>
+      </section>
+    <div class="product">
+        
+        <div class="loading"></div>
+        <div class="products-wrapper">
+            <div class="filter-container">
+                <form action="" class="input-form">
+                    <input type="text" name="search" class="seacrh" placeholder="search...">
+                </form>
+                <h3>Company</h3>
+                <div class="filters">
+                    <button class="company-btn" data-id="all">all</button> <button class="company-btn" data-id="ikea">ikea</button> <button class="company-btn" data-id="marcos">marcos</button> <button class="company-btn" data-id="caressa">caressa</button> <button class="company-btn" data-id="liddy">liddy</button>
+                </div>
+            </div>
+            <div class="list-product">
+            
+                
+            </div>
+        </div>
+        
+    </div>
+    <div class="sidebar-wrapper">
+        <aside class="sidebar">
+            <button class="close-btn">
+                <i class="fas fa-times"></i>
+            </button>
+            <ul class="sidebar-links">
+                <li>
+                    <a href="index.html" class="sidebar-link">
+                        <i class="fas fa-home fa-fw"></i>
+                        home
+                    </a>
+                </li>
+                <li>
+                    <a href="products.html" class="sidebar-link">
+                        <i class="fas fa-couch fa-fw"></i>
+                        products
+                    </a>
+                </li>
+                <li>
+                    <a href="about.html" class="sidebar-link">
+                        <i class="fas fa-book fa-fw"></i>
+                        about
+                    </a>
+                </li>
+            </ul>
+        </aside>
+    </div>
+    <div class="cart-overlay">
+        <aside class="cart">
+            <button class="cart-close">
+                <i class="fas fa-times"></i>
+            </button>
+            <header>
+                <h3 class="text-slanted">your bag</h3>
+            </header>
+            <!-- cart items -->
+            <div class="cart-items"></div>
+            <!-- footer -->
+            <footer>
+                <h3 class="cart-total text-slanted">Total : $89.90 </h3>
+                <button class="cart-checkout btn">checkout</button>
+            </footer>
+        </aside>
+    </div>
+    <script type="module" src="./products.js"></script>
+</body>
+</html>

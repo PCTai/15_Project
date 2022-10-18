@@ -43,10 +43,18 @@ function getElement(selection) {
         this.btnClose.addEventListener('click', this.closeModal.bind(this));
         this.btnNext.addEventListener('click', this.nextImage.bind(this));
         this.btnPrev.addEventListener('click', this.prevImage.bind(this));
+        this.btnPrev.addEventListener('click', this.prevImage.bind(this));
+        const chooseImage= this.chooseImage.bind(this);
+        this.modalImages.addEventListener('click', function(e){
+            if(!e.target.classList.contains('selected') && e.target.classList.contains('modal-img')){
+                chooseImage(e.target);
+            }
+        })
         
     }
     setMainImage(selectImg){
-        this.imageName=selectImg.title;
+        console.log(selectImg,this.imageName)
+        this.imageName.textContent=selectImg.title;
         this.modalImg.src= selectImg.src;
     }
     closeModal() {
@@ -74,6 +82,12 @@ function getElement(selection) {
         imageSelected.classList.remove('selected');
         prevEl.classList.add('selected');
         this.setMainImage(prevEl);
+    }
+    chooseImage(el){
+        const imageSelected= document.querySelector('.selected');
+        el.classList.add('selected');
+        imageSelected.classList.remove('selected');
+        this.setMainImage(el);
     }
 
   }

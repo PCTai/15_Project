@@ -165,6 +165,18 @@ const app = {
             img: "./images/gallery.webp",
             page: "./Gallery/index.html",
         },
+        {
+            id: 28,
+            name: "Stripe",
+            img: "./images/stripe.webp",
+            page: "./Stripe/index.html",
+        },
+        {
+            id: 29,
+            name: "Comfy Store",
+            img: "./images/comfy.webp",
+            page: "./comfy-store/index.html",
+        },
         
         
     ],
