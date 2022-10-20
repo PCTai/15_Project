@@ -74,7 +74,7 @@ form{
     max-width: 1170px;
     display: grid;
     gap: 1rem;
-    grid-template-columns: 250px 1fr;
+    grid-template-columns: 200px 1fr;
 }
 .list-product{
     width: max-content;
@@ -120,22 +120,25 @@ form{
     border-top-color:  transparent;
     animation: spiner 0.5s infinite linear;
 }
-
+@media screen and (max-width: 780px) {
+    .products-wrapper{
+        grid-template-columns: 1fr;
+    }}
 /*  Product */
+.btn-sigle {
+    float: left;
+}
 .btn{
-    width: 8rem;
-    align-items: center;
-    border: none;
-    font-size: 18px;
-    background-color: rgb(20, 80, 190);
-    padding: 0.5rem 1rem;
+    margin: 0 auto;
+    display: block;
+    width: 80%;
+    background-color: hsl(21, 62%, 45%);
+    margin-top: 2rem;
     color: #fff;
-    margin: 2rem 0;
-    border-radius: 5px;
+    max-width: 176px;
 }
 .btn:hover{
-    opacity: 0.7;
-    cursor: pointer;
+    background-color: hsl(21, 62%, 25%);
 }
 .btn::first-letter, h3::first-letter,h5::first-letter{
     text-transform: uppercase;
@@ -144,13 +147,14 @@ form{
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 2rem;
-    width: 100%;
+    margin: auto;
+    width: 90vw;
+    max-width: 1170px;
     text-align: center;
 }
 .product-wrapper{
     display: flex;
-    margin-top: 3rem;
+    margin: 3rem 0;
     align-items: center;
 }
 .img{
@@ -189,16 +193,9 @@ h5{
     margin-bottom: 1rem;
     border-radius: 50%;
 }
-
-@keyframes spiner {
-    
-    to{
-        transform: rotate(360deg);
-    }
-}
 @media screen and (max-width: 780px) {
     .product-wrapper{
-        flex-direction: column;
+       flex-direction: column;
     }
     .img{
         width: 100%;

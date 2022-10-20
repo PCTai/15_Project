@@ -177,6 +177,13 @@ const app = {
             img: "./images/comfy.webp",
             page: "./comfy-store/index.html",
         },
+
+        {
+            id: 30,
+            name: "Form",
+            img: "./images/from.png",
+            page: "./form-validate/index.html",
+        },
         
         
     ],

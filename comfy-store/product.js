@@ -1,3 +1,8 @@
+import './src/toggleSidebar.js';
+import './src/toggleCart.js';
+import { addToCart } from './src/cart/cartSetup.js';
+
+
 const url = 'https://course-api.com/javascript-store-single-product';
 const elProduct = document.querySelector('.product-wrapper');
 const loading = document.querySelector('.loading');
@@ -16,7 +21,9 @@ const fecthData = async function () {
 
     }
 }
+const pageTitle= document.querySelector('.page-hero-title');
 function renderProduct(product) {
+    
     console.log(product);
     const { id } = product;
     const { name: title, price,company,description } = product.fields;
@@ -40,11 +47,11 @@ function renderProduct(product) {
                 <p>
                     ${description}
                 </p>
-                <button class="btn">add to cart</button>
+                <button data-id="${id}" class="btn btn-sigle product-cart-btn">add to cart</button>
             </div>
         `;
     
-    
+    pageTitle.textContent= `Home / ${title}`;
     elProduct.innerHTML = productList;
 
 }
@@ -55,3 +62,10 @@ const start = async () => {
 }
 
 start();
+
+elProduct.addEventListener('click', function (e) {
+    
+    if (e.target.classList.contains('product-cart-btn')) {
+      addToCart((e.target.dataset.id));
+    }
+  });

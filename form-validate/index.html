@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="logo">
+                <span class="bg">B</span>rand!
+            </div>
+
+            <div class="image"></div>
+
+            <div class="text">
+                Start for free & get <br />
+                attractive offers today !
+            </div>
+        </div>
+        <form action="" class="form">
+            <h3 class="title">Get Started</h3>
+            <div class="group-form">
+                <div class="social">
+                    <div class="google item">
+                        <div class="image">
+                            <img src="https://img.icons8.com/color/30/000000/google-logo.png" alt="">
+                        </div>
+                        <span>Sign Up</span>
+                    </div>
+                    <div class="facebook item">
+                        <div class="image">
+                            <img src="https://img.icons8.com/color/30/000000/facebook-logo.png" alt="">
+                        </div>
+                        <span>Sign Up</span>
+                    </div>
+                </div>
+                <span class="or">or</span>
+            </div>
+            <div class="group-form">
+                <label class="label" for="username">User Name</label>
+                <div class="wrapper-input">
+                    <i class="fa-solid fa-user icon-input"></i>
+
+                    <input type="text" name="username" id="username" class="input-form">
+                    <i class="fas fa-exclamation-circle failure-icon"></i>
+                    <i class="far fa-check-circle success-icon"></i>
+                </div>
+                <div class="error"></div>
+
+
+            </div>
+            <div class="group-form">
+                <label class="label" for="email">Email</label>
+
+                <div class="wrapper-input">
+                    <i class="fa-solid fa-envelope icon-input"></i>
+                    <input type="email" name="email" id="email" class="input-form">
+                    <i class="fas fa-exclamation-circle failure-icon"></i>
+                    <i class="far fa-check-circle success-icon"></i>
+                </div>
+                <div class="error"></div>
+
+            </div>
+            <div class="group-form">
+                <label class="label" for="password">Password</label>
+
+                <div class="wrapper-input">
+                    <i class="fa-solid fa-lock icon-input"></i>
+                    <input type="password" name="password" id="password" class="input-form">
+                    <i class="fas fa-exclamation-circle failure-icon"></i>
+                    <i class="far fa-check-circle success-icon"></i>
+                </div>
+                <div class="error"></div>
+            </div>
+            <button type="submit" class="btn-submit">Submit</button>
+        </form>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
