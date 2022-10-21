@@ -7,7 +7,7 @@
   const btnNext= document.querySelector('.next-btn');
 
   let index=0;
-  let limit= 0;
+  let limit= 10;
 
 
   const fecthData = async function(){
@@ -66,7 +66,7 @@ function updateBtnPage(){
     btnPrev.addEventListener('click', function(){
       index--;
       if(index<0){
-        index=limit-1;
+        index=10-1;
       }
       renderProducts(data.slice(index*limit,limit*index +limit));
       updateBtnPage();

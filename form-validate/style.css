@@ -25,7 +25,7 @@ body{
     width: 100%;
     max-width: 1170px;
     height: 90vh;
-    max-height: 600px;
+    max-height: 800px;
 }
 .content{
     width: 55%;
@@ -35,11 +35,12 @@ body{
   justify-content: space-around;
   background-color: #f2796e;
   padding: 2rem;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+
 }
 .logo{
-    font-size: 46px;
-    letter-spacing: 2px;
-    color: #fff;
+    width: 6rem;
+    height: 3rem;
 }
 .logo .bg{
     display: inline-block;
@@ -51,7 +52,7 @@ body{
 }
 .content .image{
     flex: 1;
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmzcvFbRRVC_PxoknHcudqxf856dI37QDIYA&usqp=CAU) ;
+    background-image: url(https://huyphan20112001.github.io/projects-js/Form/images/illustration.svg) ;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -66,12 +67,21 @@ form {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: left;
     max-width: 400px;
     background-color: #fff;
     box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
     padding: 50px;
   }
+.form h5{
+    margin: 0.8rem 0;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+.login{
+    color: var(--primary-color);
+    text-decoration: none;
+}
 .social{
     display: grid;
     grid-template-columns: 1fr 1fr;

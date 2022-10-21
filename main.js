@@ -181,7 +181,7 @@ const app = {
         {
             id: 30,
             name: "Form",
-            img: "./images/from.png",
+            img: "./images/form.png",
             page: "./form-validate/index.html",
         },
         
