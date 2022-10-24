@@ -184,6 +184,12 @@ const app = {
             img: "./images/form.png",
             page: "./form-validate/index.html",
         },
+        {
+            id: 24,
+            name: "Slider 2.0",
+            img: "./images/slider2.webp",
+            page: "./slider-2.0/index.html",
+        },
         
         
     ],

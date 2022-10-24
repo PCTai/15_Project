@@ -159,6 +159,10 @@ button::first-letter{
         font-size: 20px;
         padding: 1rem;
     }
+    .banner::before{
+      height: 80%;
+      background-size:cover;
+  }
 }
 .sidebar-wrapper {
     position: fixed;

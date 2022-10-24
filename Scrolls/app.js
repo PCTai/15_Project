@@ -12,7 +12,11 @@ window.addEventListener('scroll', function(){
 })
 
 const scrollLinks = document.querySelectorAll(".links a");
-scrollLinks.forEach((link) => {
+const newArr=Array.from(scrollLinks);
+newArr.push((document.querySelector('.container .btn')))
+newArr.forEach((link) => {
+  console.log(link.innerHTML);
+
   link.addEventListener("click", (e) => {
     e.preventDefault();
     const id = e.currentTarget.getAttribute("href").slice(1);
